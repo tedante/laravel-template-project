@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::group(['prefix' => 'admin', 'middleware' => 'jwt.auth'], function(){
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
     
 	Route::get('/', 'DashboardController@getIndex');
     
