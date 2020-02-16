@@ -6,6 +6,9 @@
 4. ```php artisan passport:install```
 5. ```php artisan migrate```
 
+## iSeed
+
+php artisan iseed cb_menus,cb_modules,cb_roles,users,cb_role_privileges,failed_jobs
 
 ## License
 
