@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::group(['prefix' => 'admin', 'middleware' => 'jwt.auth'], function(){
+    
+	Route::get('/', 'DashboardController@getIndex');
+    
+});
